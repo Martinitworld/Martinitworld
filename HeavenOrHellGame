@@ -1,1 +1,60 @@
+print("Welcome to my first game")
+player_name = input("What is your name? ")
+player_age = int(input("What is your age? "))
 
+print("Hello", player_name, "you are", player_age, "years old.")
+
+life = 10
+
+print("You are starting with", life, "life")
+
+if player_age >= 18:
+    print("You are old enough to play!")
+    
+    survive_items = input("Pick your survive items (angel wings/magic wand/death scythe): ")
+    
+    if survive_items == "angel wings":
+        print("items to the win.")
+    elif survive_items == "magic wand":
+        print("items would be between win and lost.")
+    elif survive_items == "death scythe":
+        print("items would likely get you to hell.")
+    else:
+        print("you are mostly to dead without help items.")
+    wants_to_play = input("Do you want to play? ")
+    if wants_to_play == "yes":
+        print("Let's play!")
+        
+        pick_your_way = input("First choice... Left or Right(left/right)? ")
+        if pick_your_way == "left":
+            ans = input("Nice, you on the right path and reach a heaven... Do you want to go up or down(up/down)? ")
+            
+            if ans == "up":
+                print("You get 5 more life.")
+            elif ans == "down":
+                print("You only have 5 life left.")
+                life -= 5
+            ans = input("There are heaven and hell. Which do you go to(upper heaven/downner hell)? ")
+            if ans == "upper heaven":
+                print("You would become an angel.")
+                
+                if life <= 0:
+                    print("You now have 0 life and you lost the game...")
+                else:
+                    print("You are englightment... You Win")
+            
+            else:
+                print("You dead and lost the game.")
+            
+        else:
+            print("on the way to hell...")
+        
+    else:
+        print("Have a good day then!")
+elif player_age >= 14:
+    print("You have to play with your parents!")
+else:
+    print("You are not old enough to play!")
+
+
+print("end the game")
